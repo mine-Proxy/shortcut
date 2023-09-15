@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION="3.5.0"
-DOWNLOAD_HOST="https://github.com/EvilGenius-dot/shortcut/raw/main/Readme/24/linux"
+DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/24-1/linux"
 ORIGIN_EXEC="lbminer-${VERSION}"
 
 SERVICE_NAME="lbminerservice"
@@ -233,6 +233,10 @@ start() {
             echo "|----------------------------------------------------------------|"
             echo "${m_6}${port}, ${m_7}"
             echo "${m_8}"
+	    echo "v3.5.0版本优化大算力抽水抽不够问题！优化了蚂蚁出产的ks3机器"
+            echo "增加了kenc协议以及socks5，开放socks5协议, 现在可以直接在rust内开启这些协议"
+	    echo "如有任何问题请加QQ群：421834785"
+            echo "微信：lzb8fu66"
             echo "|----------------------------------------------------------------|"
         else
             echo "${m_40}"
@@ -337,23 +341,7 @@ disable_autostart() {
 
 
 ISSUE() {
-    echo "0.1.0"
-    echo "0.1.2"
-    echo "0.9.9"
-    echo "0.9.91"
-    echo "0.9.92"
-    echo "0.9.93"
-    echo "0.9.94"
-    echo "0.9.95"
-    echo "0.9.96"
-    echo "0.9.97"
-    echo "0.9.98"
-    echo "0.9.99"
-    echo "0.9.999"
-    echo "1.0.0"
-    echo "1.0.1"
-    echo "1.0.2"
-    echo "1.0.3"
+    echo "3.5.0"
 }
 
 filterResult() {
