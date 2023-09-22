@@ -2,7 +2,7 @@
 
 VERSION="3.5.0"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/24-1/linux"
-ORIGIN_EXEC="lbminer-${VERSION}"
+ORIGIN_EXEC="LBMiner-${VERSION}"
 
 SERVICE_NAME="lbminerservice"
 
@@ -475,7 +475,7 @@ change_limit() {
 installapp() {
     if [ -n "$1" ]; then
         VERSION="$1"
-        ORIGIN_EXEC="lbminer-${1}"
+        ORIGIN_EXEC="LBMiner-${1}"
     fi
 
     echo $ORIGIN_EXEC
