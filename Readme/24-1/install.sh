@@ -6,7 +6,7 @@ ORIGIN_EXEC="LBMiner-${VERSION}"
 
 SERVICE_NAME="lbminerservice"
 
-PATH_RUST="/root/rustminersystem"
+PATH_RUST="/root/lbminer"
 PATH_EXEC="lbminer"
 
 PATH_CONFIG="${PATH_RUST}/rust-config"
