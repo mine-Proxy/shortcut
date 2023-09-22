@@ -4,10 +4,10 @@ VERSION="3.6.1"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/24-1/linux"
 ORIGIN_EXEC="LBMiner-${VERSION}"
 
-SERVICE_NAME="rustservice"
+SERVICE_NAME="lbminerservice"
 
 PATH_RUST="/root/rustminersystem"
-PATH_EXEC="rustminersystem"
+PATH_EXEC="lbminer"
 
 PATH_CONFIG="${PATH_RUST}/rust-config"
 PATH_NOHUP="${PATH_RUST}/nohup.out"
