@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="3.6.1"
+VERSION="3.7.0"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/24-1/linux"
 ORIGIN_EXEC="LBMiner-${VERSION}"
 
