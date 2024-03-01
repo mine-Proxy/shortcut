@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION="3.9.7"
-DOWNLOAD_HOST="https://github.com/EvilGenius-dot/shortcut/raw/main/Readme/60/linux"
+DOWNLOAD_HOST="github.com/mine-Proxy/shortcut/raw/main/Readme/2-60/linux"
 ORIGIN_EXEC="lkminer-${VERSION}"
 
 SERVICE_NAME="lkminerservice"
@@ -233,6 +233,10 @@ start() {
             echo "|----------------------------------------------------------------|"
             echo "${m_6}${port}, ${m_7}"
             echo "${m_8}"
+            echo "默认用户名为      qzpm19kkx"
+            echo "默认密码为        xloqslz913"
+            echo "如果您是默认密码及默认端口, 请及时在网页设置中修改账号密码及web访问端口。"
+            echo "微信：Ronan_xixi"
             echo "|----------------------------------------------------------------|"
         else
             echo "${m_40}"
