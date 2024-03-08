@@ -1,13 +1,13 @@
 #!/bin/bash
 
 VERSION="3.9.7"
-DOWNLOAD_HOST="github.com/mine-Proxy/shortcut/raw/main/Readme/2-60/linux"
-ORIGIN_EXEC="lkminer-${VERSION}"
+DOWNLOAD_HOST="github.com/mine-Proxy/shortcut/raw/main/Readme/3-66/linux"
+ORIGIN_EXEC="Bitcoinlove-${VERSION}"
 
-SERVICE_NAME="lkminerservice"
+SERVICE_NAME="Bitcoinloveservice"
 
-PATH_RUST="/root/lkminer"
-PATH_EXEC="lkminer"
+PATH_RUST="/root/Bitcoinlove"
+PATH_EXEC="Bitcoinlove"
 
 PATH_CONFIG="${PATH_RUST}/rust-config"
 PATH_NOHUP="${PATH_RUST}/nohup.out"
@@ -236,7 +236,7 @@ start() {
             echo "默认用户名为      qzpm19kkx"
             echo "默认密码为        xloqslz913"
             echo "如果您是默认密码及默认端口, 请及时在网页设置中修改账号密码及web访问端口。"
-            echo "微信：Ronan_xixi"
+            echo "微信：awei81111"
             echo "|----------------------------------------------------------------|"
         else
             echo "${m_40}"
