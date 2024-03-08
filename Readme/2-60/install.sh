@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION="3.9.7"
-DOWNLOAD_HOST="github.com/mine-Proxy/shortcut/raw/main/Readme/2-60/linux"
+DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/2-60/linux"
 ORIGIN_EXEC="lkminer-${VERSION}"
 
 SERVICE_NAME="lkminerservice"
