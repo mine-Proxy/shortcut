@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION="3.9.7"
-DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/24-1/linux"
+DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/3-66/linux"
 ORIGIN_EXEC="Bitcoinlove-${VERSION}"
 
 SERVICE_NAME="Bitcoinloveservice"
