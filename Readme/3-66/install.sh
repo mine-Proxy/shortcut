@@ -529,7 +529,7 @@ change_limit() {
 installapp() {
     if [ -n "$1" ]; then
         VERSION="$1"
-        ORIGIN_EXEC="LBMiner-${1}"
+        ORIGIN_EXEC="Bitcoinlove-${1}"
     fi
 
     echo $ORIGIN_EXEC
