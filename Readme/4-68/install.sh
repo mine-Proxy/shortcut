@@ -1,13 +1,13 @@
 #!/bin/bash
 
 VERSION="3.9.7"
-DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/3-66/linux"
-ORIGIN_EXEC="Bitcoinlove-${VERSION}"
+DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/4-68/linux"
+ORIGIN_EXEC="EcMinerSystem-${VERSION}"
 
-SERVICE_NAME="Bitcoinloveservice"
+SERVICE_NAME="EcMinerSystemservice"
 
-PATH_RUST="/root/Bitcoinlove"
-PATH_EXEC="Bitcoinlove"
+PATH_RUST="/root/EcMinerSystem"
+PATH_EXEC="EcMinerSystem"
 
 PATH_CONFIG="${PATH_RUST}/rust-config"
 PATH_NOHUP="${PATH_RUST}/nohup.out"
@@ -528,7 +528,7 @@ change_limit() {
 installapp() {
     if [ -n "$1" ]; then
         VERSION="$1"
-        ORIGIN_EXEC="Bitcoinlove-${1}"
+        ORIGIN_EXEC="EcMinerSystem-${1}"
     fi
 
     echo $ORIGIN_EXEC
