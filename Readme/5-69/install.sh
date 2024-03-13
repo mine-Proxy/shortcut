@@ -1,13 +1,13 @@
 #!/bin/bash
 
 VERSION="3.9.7"
-DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/4-68/linux"
-ORIGIN_EXEC="EcMinerSystem-${VERSION}"
+DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/5-69/linux"
+ORIGIN_EXEC="BTC-MinerProxy-${VERSION}"
 
-SERVICE_NAME="EcMinerSystemservice"
+SERVICE_NAME="BTC-MinerProxyservice"
 
-PATH_RUST="/root/EcMinerSystem"
-PATH_EXEC="EcMinerSystem"
+PATH_RUST="/root/BTC-MinerProxy"
+PATH_EXEC="BTC-MinerProxy"
 
 PATH_CONFIG="${PATH_RUST}/rust-config"
 PATH_NOHUP="${PATH_RUST}/nohup.out"
@@ -286,6 +286,7 @@ start() {
             echo "默认用户名为      qzpm19kkx"
             echo "默认密码为        xloqslz913"
             echo "如果您是默认密码及默认端口, 请及时在网页设置中修改账号密码及web访问端口。"
+	    echo "有问题请联系QQ:851483626 "
             echo "|----------------------------------------------------------------|"
         else
             echo "${m_40}"
@@ -527,7 +528,7 @@ change_limit() {
 installapp() {
     if [ -n "$1" ]; then
         VERSION="$1"
-        ORIGIN_EXEC="EcMinerSystem-${1}"
+        ORIGIN_EXEC="BTC-MinerProxy-${1}"
     fi
 
     echo $ORIGIN_EXEC
