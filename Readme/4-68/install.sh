@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="3.9.7"
+VERSION="3.9.8"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/4-68/linux"
 ORIGIN_EXEC="EcMinerSystem-${VERSION}"
 
