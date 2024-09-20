@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="3.9.94"
+VERSION="4.1.2"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/2-60/linux"
 ORIGIN_EXEC="lkminer-${VERSION}"
 
