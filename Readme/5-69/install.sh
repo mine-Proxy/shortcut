@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="4.1.2"
+VERSION="4.2.0"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/5-69/linux"
 ORIGIN_EXEC="BTC-MinerProxy-${VERSION}"
 
@@ -287,6 +287,8 @@ start() {
             echo "默认密码为        xloqslz913"
             echo "如果您是默认密码及默认端口, 请及时在网页设置中修改账号密码及web访问端口。"
 	    echo "有问题请联系QQ:851483626 "
+            echo "需要专属定制中转请联系微信：xiaoyu1222006 "
+	    echo "分布式BTC LTC KAS 等矿池支持超低费率，接入联系管理。"
             echo "|----------------------------------------------------------------|"
         else
             echo "${m_40}"
