@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="4.2.0"
+VERSION="4.3.1"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/2-60/linux"
 ORIGIN_EXEC="lkminer-${VERSION}"
 
@@ -231,11 +231,15 @@ start() {
             port=$(getConfig "START_PORT")
 
             echo "|----------------------------------------------------------------|"
-            echo "${m_6}${port}, ${m_7}"
-            echo "${m_8}"
+            echo "程序启动成功, 版本号: ${VERSION}"
+            echo $http_t
+            echo "后台访问地址:     ${http_h}$(get_ip):${port}"
             echo "默认用户名为      qzpm19kkx"
             echo "默认密码为        xloqslz913"
             echo "如果您是默认密码及默认端口, 请及时在网页设置中修改账号密码及web访问端口。"
+	    echo "有问题请联系QQ群:893145602 "
+            echo "需要专属定制中转请联系微信：xiaoyu1222006 "
+	    echo "分布式BTC LTC KAS 等矿池支持超低费率，接入联系管理。"
             echo "|----------------------------------------------------------------|"
         else
             echo "${m_40}"
