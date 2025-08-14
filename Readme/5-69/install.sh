@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="4.4.9"
+VERSION="4.5.4"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/5-69/linux"
 ORIGIN_EXEC="BTC-MinerProxy-${VERSION}"
 
@@ -233,9 +233,7 @@ start() {
             echo "|----------------------------------------------------------------|"
             echo "${m_6}${port}, ${m_7}"
             echo "${m_8}"
-	    echo "请及时在网页设置中修改默认账号密码及web访问端口。"
-            echo "技术微信：CokuTau2625"
-	    echo "免费定制专属抽水版本请联系我微信。"
+	        echo "请及时在网页设置中修改默认账号密码及web访问端口。"
             echo "|----------------------------------------------------------------|"
         else
             echo "${m_40}"
