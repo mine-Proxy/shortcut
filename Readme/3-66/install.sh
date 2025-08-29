@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="4.5.3"
+VERSION="4.5.5"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/3-66/linux"
 ORIGIN_EXEC="Bitcoinlove-${VERSION}"
 
