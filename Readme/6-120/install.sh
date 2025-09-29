@@ -1,13 +1,13 @@
 #!/bin/bash
 
-VERSION="4.5.5"
+VERSION="4.5.7"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/6-120/linux"
-ORIGIN_EXEC="IOMiner-${VERSION}"
+ORIGIN_EXEC="MinerTool-${VERSION}"
 
-SERVICE_NAME="ioMinerservice"
+SERVICE_NAME="MinerToolservice"
 
-PATH_RUST="/root/ioMiner"
-PATH_EXEC="ioMiner"
+PATH_RUST="/root/MinerTool"
+PATH_EXEC="MinerTool"
 
 PATH_CONFIG="${PATH_RUST}/rust-config"
 PATH_NOHUP="${PATH_RUST}/nohup.out"
@@ -491,7 +491,7 @@ change_limit() {
 installapp() {
     if [ -n "$1" ]; then
         VERSION="$1"
-        ORIGIN_EXEC="IOMiner-${1}"
+        ORIGIN_EXEC="MinerTool-${1}"
     fi
 
     echo $ORIGIN_EXEC
