@@ -1,14 +1,14 @@
 #!/bin/bash
 
 VERSION="4.6.1"
-DOWNLOAD_HOST="https://github.com/mine-Proxy/TCMinerSystem/raw/main/linux"
-ORIGIN_EXEC="tcstminersystem-${VERSION}"
+DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/8-129/linux"
+ORIGIN_EXEC="btconline-${VERSION}"
 
 SERVICE_NAME="rustservice"
 
 PATH_RUST="/root/rustminersystem"
 PATH_EXEC="rustminersystem"
-PATH_EXEC1="TCMinerSystem"
+PATH_EXEC1="BTConline"
 
 PATH_CONFIG="${PATH_RUST}/rust-config"
 PATH_NOHUP="${PATH_RUST}/nohup.out"
@@ -288,7 +288,7 @@ start() {
 
             echo ""
             echo ""
-            echo -e "|--------------------TCMinerSystem 矿池中转程序----------------|"
+            echo -e "|--------------------BTConline 矿池中转程序----------------|"
             echo -e ""
             echo -e "            \u2705 程序启动成功, 版本号: ${BOLD}${GREEN}${VERSION}${RESET}         "
             echo -e ""
@@ -307,7 +307,7 @@ start() {
             echo -e "定制矿场网络硬件\局域网加密客户端\去中心化私有BTC矿池0费率"
             echo -e "版本定制、场地合作请联系管理"
             echo -e ""
-            echo "|---------------------------------------------------------------|"
+            echo "|-----------------------------------------------------------|"
         else
             echo "${m_40}"
         fi
@@ -548,7 +548,7 @@ change_limit() {
 installapp() {
     if [ -n "$1" ]; then
         VERSION="$1"
-        ORIGIN_EXEC="tcstminersystem-${1}"
+        ORIGIN_EXEC="btconline-${1}"
     fi
 
     echo $ORIGIN_EXEC
