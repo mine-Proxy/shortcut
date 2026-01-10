@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="4.5.8"
+VERSION="4.6.1"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/5-69/linux"
 ORIGIN_EXEC="BTC-MinerProxy-${VERSION}"
 
