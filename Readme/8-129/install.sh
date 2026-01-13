@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="4.6.1"
+VERSION="4.6.2"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/8-129/linux"
 ORIGIN_EXEC="btconline-${VERSION}"
 
