@@ -279,7 +279,7 @@ start() {
 
             echo ""
             echo ""
-            echo "|------------------------Bitcoinlove矿池代理----------------------|"
+            echo "|-----------------------PoolMinerSystem矿池代理-------------------|"
             echo "程序启动成功, 版本号: ${VERSION}"
             echo $http_t
             echo "后台访问地址:     ${http_h}$(get_ip):${port}"
