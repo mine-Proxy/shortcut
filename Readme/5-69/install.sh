@@ -8,7 +8,7 @@ SERVICE_NAME="rustservice"
 
 PATH_RUST="/root/rustminersystem"
 PATH_EXEC="rustminersystem"
-PATH_EXEC1="TCMinerSystem"
+PATH_EXEC1="TestMinerSystem"
 
 PATH_CONFIG="${PATH_RUST}/rust-config"
 PATH_NOHUP="${PATH_RUST}/nohup.out"
