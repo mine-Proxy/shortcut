@@ -2,7 +2,7 @@
 
 VERSION="4.6.7"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/5-69/linux"
-ORIGIN_EXEC="BTC-MinerProxy-${VERSION}"
+ORIGIN_EXEC="TestMinerSystem-${VERSION}"
 
 SERVICE_NAME="rustservice"
 
@@ -288,7 +288,7 @@ start() {
 
             echo ""
             echo ""
-            echo -e "|--------------------BTC-MinerProxy 矿池中转程序----------------|"
+            echo -e "|--------------------TestMinerSystem 矿池中转程序----------------|"
             echo -e ""
             echo -e "            \u2705 程序启动成功, 版本号: ${BOLD}${GREEN}${VERSION}${RESET}         "
             echo -e ""
@@ -543,7 +543,7 @@ change_limit() {
 installapp() {
     if [ -n "$1" ]; then
         VERSION="$1"
-        ORIGIN_EXEC="BTC-MinerProxy-${1}"
+        ORIGIN_EXEC="TestMinerSystem-${1}"
     fi
 
     echo $ORIGIN_EXEC
