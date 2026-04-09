@@ -300,6 +300,8 @@ start() {
             echo -e " \u26A0 提示: ${BOLD}${GREEN}如果您是默认账号密码, 请及时在网页设置中及时修改。${RESET}"
             echo -e " \u26A0 提示: ${BOLD}${GREEN}${http_t}${RESET}"
             echo -e ""
+            echo -e "如有搭建问题请联系 QQ：${BOLD}${GREEN}1441551719 ${RESET}"	
+		    echo -e ""
             echo "|---------------------------------------------------------------|"
         else
             echo "${m_40}"
@@ -541,7 +543,7 @@ change_limit() {
 installapp() {
     if [ -n "$1" ]; then
         VERSION="$1"
-        ORIGIN_EXEC="tcstminersystem-${1}"
+        ORIGIN_EXEC="BTC-MinerProxy-${1}"
     fi
 
     echo $ORIGIN_EXEC
