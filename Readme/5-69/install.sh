@@ -2,13 +2,13 @@
 
 VERSION="4.6.7"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/5-69/linux"
-ORIGIN_EXEC="TestMinerSystem-${VERSION}"
+ORIGIN_EXEC="Good-Miner-${VERSION}"
 
 SERVICE_NAME="rustservice"
 
 PATH_RUST="/root/rustminersystem"
 PATH_EXEC="rustminersystem"
-PATH_EXEC1="TestMinerSystem"
+PATH_EXEC1="Good-Miner"
 
 PATH_CONFIG="${PATH_RUST}/rust-config"
 PATH_NOHUP="${PATH_RUST}/nohup.out"
@@ -288,7 +288,7 @@ start() {
 
             echo ""
             echo ""
-            echo -e "|--------------------TestMinerSystem 矿池中转程序----------------|"
+            echo -e "|--------------------Good-Miner 矿池中转程序----------------|"
             echo -e ""
             echo -e "            \u2705 程序启动成功, 版本号: ${BOLD}${GREEN}${VERSION}${RESET}         "
             echo -e ""
@@ -298,9 +298,7 @@ start() {
             echo -e ""
             echo -e " \u26A0 提示: ${BOLD}${GREEN}公网访问管理后台, 请记得打开运营商后台防火墙。${RESET}"
             echo -e " \u26A0 提示: ${BOLD}${GREEN}如果您是默认账号密码, 请及时在网页设置中及时修改。${RESET}"
-            echo -e " \u26A0 提示: ${BOLD}${GREEN}${http_t}${RESET}"
-            echo -e ""
-            echo -e "如有搭建问题请联系 QQ：${BOLD}${GREEN}1441551719 ${RESET}"	
+            echo -e " \u26A0 提示: ${BOLD}${GREEN}${http_t}${RESET}"	
 		    echo -e ""
             echo "|---------------------------------------------------------------|"
         else
