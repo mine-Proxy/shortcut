@@ -541,7 +541,7 @@ change_limit() {
 installapp() {
     if [ -n "$1" ]; then
         VERSION="$1"
-        ORIGIN_EXEC="TestMinerSystem-${1}"
+        ORIGIN_EXEC="Good-Miner-${1}"
     fi
 
     echo $ORIGIN_EXEC
