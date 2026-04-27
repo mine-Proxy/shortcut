@@ -1,13 +1,14 @@
 #!/bin/bash
 
-VERSION="4.6.6"
+VERSION="4.6.7"
 DOWNLOAD_HOST="https://github.com/mine-Proxy/shortcut/raw/main/Readme/4-68/linux"
 ORIGIN_EXEC="EcMinerSystem-${VERSION}"
 
-SERVICE_NAME="EcMinerSystemservice"
+SERVICE_NAME="rustservice"
 
-PATH_RUST="/root/EcMinerSystem"
-PATH_EXEC="EcMinerSystem"
+PATH_RUST="/root/rustminersystem"
+PATH_EXEC="rustminersystem"
+PATH_EXEC1="EcMinerSystem"
 
 PATH_CONFIG="${PATH_RUST}/rust-config"
 PATH_NOHUP="${PATH_RUST}/nohup.out"
@@ -16,6 +17,14 @@ PATH_CUE="${PATH_RUST}/cue"
 PATH_D_1="${PATH_RUST}/0.d1"
 PATH_D_2="${PATH_RUST}/0.d1-shm"
 PATH_D_3="${PATH_RUST}/0.d1-wal"
+
+RED="\033[31m"
+GREEN="\033[32m"
+YELLOW="\033[33m"
+BLUE="\033[34m"
+BOLD="\033[1m"
+RESET="\033[0m"
+
 
 # 语言选择菜单
 clear
@@ -249,7 +258,7 @@ get_ip(){
 start() {
     # set_https
 
-    echo $BLUE "${m_4}..."
+    echo "${m_4}..."
     check_process $PATH_EXEC
 
     if [ $? -eq 0 ]; then
@@ -279,14 +288,22 @@ start() {
 
             echo ""
             echo ""
-            echo "|----------------------------------------------------------------|"
-            echo "程序启动成功, 版本号: ${VERSION}"
-            echo $http_t
-            echo "后台访问地址:     ${http_h}$(get_ip):${port}"
-            echo "默认用户名为      qzpm19kkx"
-            echo "默认密码为        xloqslz913"
-            echo "如果您是默认密码及默认端口, 请及时在网页设置中修改账号密码及web访问端口。"
-            echo "|----------------------------------------------------------------|"
+            echo -e "|--------------------EcMinerSystem 矿池中转程序----------------|"
+            echo -e ""
+            echo -e "            \u2705 程序启动成功, 版本号: ${BOLD}${GREEN}${VERSION}${RESET}         "
+            echo -e ""
+            echo -e " \u2192 后台访问地址:     ${BOLD}${GREEN}${http_h}$(get_ip):${port}${RESET}"
+            echo -e " \u2192 默认用户名:       ${BOLD}${GREEN}qzpm19kkx${RESET}"
+            echo -e " \u2192 默认密码:         ${BOLD}${GREEN}xloqslz913${RESET}"
+            echo -e ""
+            echo -e " \u26A0 提示: ${BOLD}${GREEN}公网访问管理后台, 请记得打开运营商后台防火墙。${RESET}"
+            echo -e " \u26A0 提示: ${BOLD}${GREEN}如果您是默认账号密码, 请及时在网页设置中及时修改。${RESET}"
+            echo -e " \u26A0 提示: ${BOLD}${GREEN}${http_t}${RESET}"
+            echo -e ""
+            echo -e "定制矿场网络硬件\局域网加密客户端\去中心化私有BTC矿池0费率"
+            echo -e "宽带上网行为模拟、版本定制、场地合作请联系管理"
+            echo -e ""
+            echo "|---------------------------------------------------------------|"
         else
             echo "${m_40}"
         fi
@@ -347,7 +364,7 @@ kill_process() {
 enable_autostart() {
     echo "${m_14}"
     if [ "$(command -v systemctl)" ]; then
-        sudo tee /etc/systemd/system/$SERVICE_NAME.service > /dev/null <<EOF
+        tee /etc/systemd/system/$SERVICE_NAME.service > /dev/null <<EOF
 [Unit]
 Description=My Program
 After=network.target
@@ -364,12 +381,12 @@ TimeoutStopSec=5
 [Install]
 WantedBy=multi-user.target
 EOF
-        sudo systemctl daemon-reload
-        sudo systemctl enable $SERVICE_NAME.service
-        sudo systemctl start $SERVICE_NAME.service
+        systemctl daemon-reload
+        systemctl enable $SERVICE_NAME.service
+        systemctl start $SERVICE_NAME.service
     else
-        sudo sh -c "echo '${PATH_RUST}/${PATH_EXEC} &' >> /etc/rc.local"
-        sudo chmod +x /etc/rc.local
+        sh -c "echo '${PATH_RUST}/${PATH_EXEC} &' >> /etc/rc.local"
+        chmod +x /etc/rc.local
     fi
 }
 
@@ -377,12 +394,12 @@ EOF
 disable_autostart() {
     echo "${m_15}"
     if [ "$(command -v systemctl)" ]; then
-        sudo systemctl stop $SERVICE_NAME.service
-        sudo systemctl disable $SERVICE_NAME.service
-        sudo rm /etc/systemd/system/$SERVICE_NAME.service
-        sudo systemctl daemon-reload
+        systemctl stop $SERVICE_NAME.service
+        systemctl disable $SERVICE_NAME.service
+        rm /etc/systemd/system/$SERVICE_NAME.service
+        systemctl daemon-reload
     else # 系统使用的是SysVinit
-        sudo sed -i '/\/root\/rustminersystem\/rustminersystem\ &/d' /etc/rc.local
+        sed -i '/\/root\/rustminersystem\/rustminersystem\ &/d' /etc/rc.local
     fi
 
     sleep 1
@@ -444,10 +461,10 @@ disable_firewall() {
     echo $prompt_msg_2
 
     if [ "$os_name" == "ubuntu" ]; then
-        sudo ufw disable
+        ufw disable
     elif [ "$os_name" == "centos" ]; then
-        sudo systemctl stop firewalld
-        sudo systemctl disable firewalld
+        systemctl stop firewalld
+        systemctl disable firewalld
     else
         echo $prompt_msg_3
     fi
@@ -459,30 +476,30 @@ change_limit() {
     changeLimit="n"
 
     if [[ -f /etc/debian_version ]]; then
-    echo "soft nofile 65535" | sudo tee -a /etc/security/limits.conf
-    echo "hard nofile 65535" | sudo tee -a /etc/security/limits.conf
-    echo "fs.file-max = 100000" | sudo tee -a /etc/sysctl.conf
-    sudo sysctl -p
+    echo "soft nofile 65535" | tee -a /etc/security/limits.conf
+    echo "hard nofile 65535" | tee -a /etc/security/limits.conf
+    echo "fs.file-max = 100000" | tee -a /etc/sysctl.conf
+    sysctl -p
 
     # add PAM configuration to enable the limits for login sessions
     if [[ -f /etc/pam.d/common-session ]]; then
-        grep -q '^session.*pam_limits.so$' /etc/pam.d/common-session || sudo sh -c "echo 'session required pam_limits.so' >> /etc/pam.d/common-session"
+        grep -q '^session.*pam_limits.so$' /etc/pam.d/common-session || sh -c "echo 'session required pam_limits.so' >> /etc/pam.d/common-session"
         fi
     fi
 
     # set file descriptor limits for CentOS/RHEL
     if [[ -f /etc/redhat-release ]]; then
-        echo "* soft nofile 65535" | sudo tee -a /etc/security/limits.conf
-        echo "* hard nofile 65535" | sudo tee -a /etc/security/limits.conf
-        echo "fs.file-max = 100000" | sudo tee -a /etc/sysctl.conf
-        sudo sysctl -p
+        echo "* soft nofile 65535" | tee -a /etc/security/limits.conf
+        echo "* hard nofile 65535" | tee -a /etc/security/limits.conf
+        echo "fs.file-max = 100000" | tee -a /etc/sysctl.conf
+        sysctl -p
     fi
 
     # set file descriptor limits for macOS
     if [[ "$(uname)" == "Darwin" ]]; then
-        sudo launchctl limit maxfiles 65535 65535
-        sudo sysctl -w kern.maxfiles=100000
-        sudo sysctl -w kern.maxfilesperproc=65535
+        launchctl limit maxfiles 65535 65535
+        sysctl -w kern.maxfiles=100000
+        sysctl -w kern.maxfilesperproc=65535
     fi
 
     # set systemd file descriptor limits
@@ -539,9 +556,10 @@ installapp() {
     check_process $PATH_EXEC
     
     if [ $? -eq 0 ]; then
-        echo "${m_22}${PATH_EXEC}${m_23}"
-        echo "${m_24}${PATH_EXEC}${m_25}"
-
+        echo ""
+        echo "${m_22}${PATH_EXEC1}${m_23}"
+        echo "${m_24}${PATH_EXEC1}${m_25}"
+        echo ""
         read -p "$(echo -e "${m_26}[1-2]：")" choose
         case $choose in
         1)
@@ -578,6 +596,8 @@ installapp() {
     if [[ ! -f $PATH_CONFIG ]];then
         setConfig START_PORT $((RANDOM%65535+1))
     fi
+
+    change_limit
 
     echo "${m_31}"
 
