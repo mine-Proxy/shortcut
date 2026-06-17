@@ -4,7 +4,7 @@
 # Usage: sh op-x64-install.sh
 
 DEFAULT_VERSION="5.0.1"
-OVERSEAS_URL="https://github.com/mine-Proxy/TCMinerSystem/raw/refs/heads/main/linux/tcstminersystem"
+OVERSEAS_URL="https://github.com/mine-Proxy/shortcut/tree/main/Readme/9-137/linux"
 DOMESTIC_URL="https://proxy.tcminersystem.com/id137/tcminersystem"
 INSTALL_DIR="/opt/TCMinerSystem"
 SERVICE_NAME="tcminersystem"
